@@ -11,6 +11,7 @@ export default function Home ({shows, setShows}) {
 
   return (
     <div className="main-container">
+      <h1>Home</h1>
       { !shows 
           ? "Loading..."
           : shows.map(
