@@ -47,13 +47,12 @@ export default function AddShow( {setShows} ) {
 
             <br />
 
-            <label htmlFor="seasons">Seasons
+            <label className="season-container" htmlFor="seasons">Seasons
               <input
                 type="text"
                 value={seasons}
                 onChange={ (e) => {setSeasons(e.target.value)}} />
             </label>
-
             <br />
 
           <input type="submit" value="Add Show" />

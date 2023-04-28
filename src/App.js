@@ -15,10 +15,10 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Home shows={shows} setShows={setShows}/>}/>
           <Route path='/signup' element={<SignUp setUser={setUser}/>}/>
           <Route path='/addshow' element={<AddShow setShows={setShows}/>}/>
           <Route path='/login' element={<Login setUser={setUser}/>}/>
+          <Route path='/' element={<Home shows={shows} setShows={setShows}/>}/>
         </Routes>
       </BrowserRouter>
     </>

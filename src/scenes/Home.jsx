@@ -10,8 +10,9 @@ export default function Home ({shows, setShows}) {
 
 
   return (
-    <div className="main-container">
-      <h1>Home</h1>
+    <>
+    <h1>Home</h1>
+    <div className="main-container">      
       { !shows 
           ? "Loading..."
           : shows.map(
@@ -19,11 +20,12 @@ export default function Home ({shows, setShows}) {
               <div key={show.id} className="show-container button-effect">
                 <img src={show.poster} alt="" />
                 <h2>{show.title}</h2>
-                <p>Seasons: {show.seasons}</p>
+                <p className="season-container">Seasons: {show.seasons}</p>
               </div>
             )
           )
       }
     </div>
+    </>
   )
 }

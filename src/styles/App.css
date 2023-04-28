@@ -1,13 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+:root {
+  --border-radius: 9px;
+  --color-bg__main: #f4f5f6;
+  --color__main: #030303;
+  --color__second: #333333;
+  --color-accent__main: rgb(247, 167, 18); 
+  --color-accent__second: rgb(225, 255, 0);
+}
+
+body {
+  background-image: url("/public/images/moonBackground.webp");
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  transition-duration: 1.3s;
+  display: flex;
+  margin: auto;
+}
+
+h1 {
+  font-weight: 900;
+  color: darkturquoise;
+  text-align: center;
+}
+
+h2 {
+  font-weight: 700;
+  color:aliceblue;
+  font-family: 'Press Start 2P', cursive;
+
+}
+
+.season-container {
+  font-weight: 700;
+  
+  color: floralwhite;
+}
 
 .main-container {
   display:flex;
   flex-direction: row;
   flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
 }
 
 .show-container {
   width: 300px;
-  margin: 10px;
+  margin: 30px;
 }
 
 .show-container img {
