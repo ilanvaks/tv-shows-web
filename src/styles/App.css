@@ -1,12 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Pixels&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@200&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 
 :root {
-  --border-radius: 9px;
+  --border-radius: 20px;
   --color-bg__main: #f4f5f6;
   --color__main: #030303;
   --color__second: #333333;
-  --color-accent__main: rgb(247, 167, 18); 
+  --color-accent__main: rgb(247, 167, 18);
   --color-accent__second: rgb(225, 255, 0);
 }
 
@@ -26,23 +36,26 @@ h1 {
   font-weight: 900;
   color: darkturquoise;
   text-align: center;
+  padding: 15px;
+  font-size: clamp(41px, 4vw, 58px);
+  font-family: 'Rubik Pixels', cursive;
 }
 
 h2 {
   font-weight: 700;
-  color:aliceblue;
+  color: aliceblue;
   font-family: 'Press Start 2P', cursive;
 
 }
 
 .season-container {
   font-weight: 700;
-  
+
   color: floralwhite;
 }
 
 .main-container {
-  display:flex;
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
@@ -53,10 +66,11 @@ h2 {
 .show-container {
   width: 300px;
   margin: 30px;
+  justify-content: center;
 }
 
 .show-container img {
-  width: 300px; 
+  width: 300px;
   object-fit: cover;
   aspect-ratio: 1 / 1;
 }
@@ -77,9 +91,14 @@ h2 {
 
 /* Disable hover effects on mobile */
 @media (max-width: 768px) {
-  .button-effect:hover
-  {
-      transform: scale(1.0);
-      filter: none;
+  .button-effect:hover {
+    transform: scale(1.0);
+    filter: none;
   }
+}
+
+.signup-container {
+  font-family: 'Saira Semi Condensed', sans-serif;
+  color: antiquewhite;
+
 }

@@ -26,8 +26,8 @@ export default function SignUp ( {setUser} ) {
   return (
     <>
       <h2>SignUp</h2>
-        <form onSubmit={handleSignUp}>
-          <label htmlFor="email">Email 
+        <form className="signup-container" onSubmit={handleSignUp}>
+          <label className="signup-container" htmlFor="email">Email 
           <input 
           type="text"
           value={email}
@@ -36,7 +36,7 @@ export default function SignUp ( {setUser} ) {
 
           <br /> 
 
-          <label htmlFor="password">Password  
+          <label className="signup-container" htmlFor="password">Password  
             <input
             type="password"
             value={password}
