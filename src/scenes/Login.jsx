@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useNavigate} from "react-router-dom"
+
 export default function Login ({setUser}) {
   
   const [email, setEmail] = useState('')
@@ -19,7 +20,8 @@ export default function Login ({setUser}) {
         alert(data.message)
         return
       }
-      setUser(data)
+      setUser(data.user)
+      localStorage.setItem("token", data.token)
       navigate('/')
     })
     .catch(alert)

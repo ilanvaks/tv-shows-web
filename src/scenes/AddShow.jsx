@@ -1,17 +1,28 @@
-import { useState } from "react"
-
+import { useState, useEffect } from "react"
+import { useNavigate } from "react-router-dom"
 
 export default function AddShow( {setShows} ) {
   const [title, setTitle]= useState("")
   const [poster, setPoster]= useState("")
   const [seasons, setSeasons]= useState("")
+  const navigate = useNavigate("")
+  
+  const token = localStorage.getItem("token") // get our JWT
+
+  useEffect(() => {
+    if(!token) {
+      navigate("/login")
+    }
+  }, [])
 
   const handleAddShow= (e) => {
     e.preventDefault()
 
     fetch("https://tv-shows-api-iv.web.app/shows", {
       method: "POST",
-      headers: { "Content-Type": "application/json"},
+      headers: { "Content-Type": "application/json",
+                  "Authorization": token,
+      },
       body: JSON.stringify( {title, poster, seasons} )
     })
     .then(resp => resp.json())
@@ -47,7 +58,7 @@ export default function AddShow( {setShows} ) {
 
             <br />
 
-            <label className="season-container" htmlFor="seasons">Seasons
+            <label htmlFor="seasons">Seasons
               <input
                 type="text"
                 value={seasons}
